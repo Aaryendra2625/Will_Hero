@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="pauseMenu" focusTraversable="true" prefHeight="770.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.pauseMenuController">
+   <children>
+      <ImageView fitHeight="457.0" fitWidth="386.0" layoutX="484.0" layoutY="119.0" pickOnBounds="true" rotate="180.0">
+         <image>
+            <Image url="@backgroundPauseMenu.png" />
+         </image>
+         <effect>
+            <DropShadow spread="0.56">
+               <input>
+                  <Glow level="0.23" />
+               </input>
+            </DropShadow>
+         </effect>
+      </ImageView>
+      <Group fx:id="start_new_game" />
+   </children>
+</AnchorPane>

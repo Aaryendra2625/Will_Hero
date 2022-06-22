@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainMenuAnchorpane" prefHeight="770.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.mainMenuController">
+   <children>
+      <ImageView fitHeight="770.0" fitWidth="1408.0" pickOnBounds="true">
+         <image>
+            <Image url="@backgroundPauseMenu.png" />
+         </image>
+         <effect>
+            <DropShadow spread="0.56">
+               <input>
+                  <Glow level="0.23" />
+               </input>
+            </DropShadow>
+         </effect>
+      </ImageView>
+      <Group fx:id="will_hero_label">
+         <children>
+            <Label fx:id="will_hero_label1" layoutX="565.0" layoutY="70.0" text="WILL" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Black" size="96.0" />
+               </font>
+               <effect>
+                  <DropShadow spread="1.0" />
+               </effect>
+            </Label>
+            <Label fx:id="will_hero_label2" layoutX="582.0" layoutY="175.0" text="HERO" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Black" size="73.0" />
+               </font>
+               <effect>
+                  <DropShadow spread="1.0" />
+               </effect>
+            </Label>
+         </children>
+      </Group>
+      <ImageView fx:id="sound_off" fitWidth="45.0" layoutX="1345.0" layoutY="5.0" onMouseClicked="#sound_on_off" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@sound_off.png" />
+         </image>
+         <effect>
+            <InnerShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="sound_on" fitHeight="150.0" fitWidth="50.0" layoutX="1345.0" layoutY="5.0" onMouseClicked="#sound_on_off" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@sound_on.png" />
+         </image>
+         <effect>
+            <InnerShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Group fx:id="creatures" rotate="-180.0">
+         <children>
+            <ImageView fx:id="img1" fitHeight="100.0" fitWidth="100.0" layoutX="-108.0" layoutY="367.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Helmet3.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="orc1" fitHeight="100.0" fitWidth="100.0" layoutX="-254.0" layoutY="371.0" pickOnBounds="true" rotate="180.0">
+               <image>
+                  <Image url="@RedOrc1.png" />
+               </image>
+               <rotationAxis>
+                  <Point3D y="1.0" />
+               </rotationAxis>
+            </ImageView>
+            <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="-409.0" layoutY="371.0" pickOnBounds="true" rotate="180.0">
+               <image>
+                  <Image url="@Orc5.png" />
+               </image>
+               <rotationAxis>
+                  <Point3D y="1.0" />
+               </rotationAxis>
+            </ImageView>
+            <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="-550.0" layoutY="371.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+               <image>
+                  <Image url="@Orc2.png" />
+               </image>
+               <rotationAxis>
+                  <Point3D y="1.0" />
+               </rotationAxis>
+            </ImageView>
+         </children>
+         <rotationAxis>
+            <Point3D y="1.0" />
+         </rotationAxis>
+      </Group>
+   </children>
+</AnchorPane>

@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="2000.0" prefWidth="2000.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <ImageView fx:id="background" fitHeight="770.0" fitWidth="1400.0" pickOnBounds="true">
+         <image>
+            <Image url="@img.png" />
+         </image>
+         <effect>
+            <Glow level="0.8" />
+         </effect>
+      </ImageView>
+      <Group fx:id="clouds_group">
+         <children>
+            <ImageView fx:id="cloud1" fitHeight="150.0" fitWidth="180.0" layoutX="44.0" layoutY="28.0" opacity="0.95" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@cloud.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="cloud2" fitHeight="150.0" fitWidth="170.0" layoutX="156.0" layoutY="122.0" opacity="0.77" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@cloud.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="cloud3" fitHeight="150.0" fitWidth="175.0" layoutX="385.0" layoutY="61.0" opacity="0.95" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@cloud.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="cloud31" fitHeight="150.0" fitWidth="175.0" layoutX="732.0" layoutY="74.0" opacity="0.62" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@cloud.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="cloud32" fitHeight="150.0" fitWidth="175.0" layoutX="955.0" layoutY="14.0" opacity="0.95" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@cloud.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="cloud321" fitHeight="150.0" fitWidth="175.0" layoutX="1181.0" layoutY="49.0" opacity="0.68" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@cloud.png" />
+               </image>
+            </ImageView>
+            <Group fx:id="floor_group" layoutX="-467.0" layoutY="-276.0">
+               <children>
+                  <ImageView fx:id="ground1" fitHeight="148.0" fitWidth="264.0" layoutX="184.0" layoutY="459.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@ground1.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="ground2" fitHeight="276.0" fitWidth="197.0" layoutX="400.0" layoutY="340.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@ground6.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="ground3" fitHeight="246.0" fitWidth="308.0" layoutX="610.0" layoutY="366.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@ground4.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="ground_4" fitHeight="200.0" fitWidth="152.0" focusTraversable="true" layoutX="900.0" layoutY="160.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@ground5.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="ground5" fitHeight="276.0" fitWidth="272.0" layoutX="1040.0" layoutY="331.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@ground3.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="willHeropng1" fitHeight="60.0" fitWidth="50.0" layoutX="114.0" layoutY="304.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@WillHero.png" />
+                     </image>
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </ImageView>
+               </children>
+            </Group>
+         </children>
+      </Group>
+      <Button fx:id="Start_button" layoutX="616.0" layoutY="636.0" mnemonicParsing="false" onAction="#click_start" prefHeight="52.0" prefWidth="138.0" text="Start">
+         <font>
+            <Font name="Segoe UI Black" size="30.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Group fx:id="everything">
+         <children>
+            <Label fx:id="tap" layoutX="315.0" layoutY="175.0" opacity="0.0" text="Tap " textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Black" size="60.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <Label fx:id="twice" layoutX="252.0" layoutY="240.0" opacity="0.0" text="to move" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Black" size="60.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <Group fx:id="orc_group">
+               <children>
+                  <ImageView fitHeight="110.0" fitWidth="110.0" layoutX="1120.0" layoutY="350.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@orc1.png" />
+                     </image>
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color red="0.1792982518672943" green="0.7684210538864136" blue="0.22839181125164032" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </ImageView>
+               </children>
+            </Group>
+            <ImageView fx:id="willHeropng" fitHeight="60.0" fitWidth="50.0" layoutX="114.0" layoutY="405.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@WillHero.png" />
+               </image>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </ImageView>
+         </children>
+      </Group>
+      <ImageView fx:id="sound_on" fitHeight="150.0" fitWidth="50.0" layoutX="1345.0" layoutY="5.0" onMouseClicked="#sound_on_off" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@sound_on.png" />
+         </image>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </ImageView>
+      <ImageView fx:id="sound_off" fitWidth="45.0" layoutX="1345.0" layoutY="5.0" onMouseClicked="#sound_on_off" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@sound_off.png" />
+         </image>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </ImageView>
+      <Label fx:id="will_hero_label1" layoutX="540.0" layoutY="70.0" text="WILL" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Black" size="96.0" />
+         </font>
+         <effect>
+            <DropShadow spread="1.0">
+               <color>
+                  <Color red="0.0736842080950737" green="0.0736842080950737" blue="0.0736842080950737" />
+               </color></DropShadow>
+         </effect>
+      </Label>
+      <Label fx:id="will_hero_label2" layoutX="557.0" layoutY="165.0" text="HERO" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Black" size="73.0" />
+         </font>
+         <effect>
+            <DropShadow spread="1.0" />
+         </effect>
+      </Label>
+      <Label fx:id="movements" layoutX="650.0" opacity="0.0" text="0" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Black" size="53.0" />
+         </font>
+         <effect>
+            <DropShadow spread="0.6" />
+         </effect>
+      </Label>
+      <ImageView fx:id="pause" fitHeight="45.0" fitWidth="45.0" layoutX="1295.0" layoutY="5.0" onMouseClicked="#pause" pickOnBounds="true">
+         <image>
+            <Image url="@pauseButton.png" />
+         </image>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="380.0" fitWidth="440.0" layoutX="320.0" layoutY="1070.0" pickOnBounds="true">
+         <image>
+            <Image url="@whitescreen.png" />
+         </image>
+         <effect>
+            <Lighting diffuseConstant="2.0" specularConstant="0.0" specularExponent="0.0" surfaceScale="0.0">
+               <bumpInput>
+                  <Shadow height="140.31" radius="39.8275">
+                     <color>
+                        <Color red="1.0" />
+                     </color>
+                  </Shadow>
+               </bumpInput>
+               <light>
+                  <Light.Distant>
+                     <color>
+                        <Color red="1.0" green="0.13333334028720856" blue="0.03529411926865578" />
+                     </color>
+                  </Light.Distant>
+               </light>
+            </Lighting>
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="520.0" layoutY="1220.0" pickOnBounds="true">
+         <image>
+            <Image url="@TNT.png" />
+         </image>
+      </ImageView>
+      <Circle fill="DODGERBLUE" layoutX="68.0" layoutY="700.0" opacity="0.5" radius="45.0" stroke="BLACK" strokeType="INSIDE" />
+      <ImageView fitHeight="30.0" fitWidth="79.0" layoutX="130.0" layoutY="685.0" pickOnBounds="true">
+         <image>
+            <Image url="@WeaponSword.png" />
+         </image>
+      </ImageView>
+      <Circle fill="DODGERBLUE" layoutX="170.0" layoutY="700.0" opacity="0.2" radius="45.0" stroke="BLACK" strokeType="INSIDE" />
+      <ImageView fitHeight="65.0" fitWidth="64.0" layoutX="36.0" layoutY="668.0" pickOnBounds="true">
+         <image>
+            <Image url="@WeaponShuriken.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
